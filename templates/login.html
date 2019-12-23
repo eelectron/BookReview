@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Login
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<form action="{{ url_for('login')}}" method="POST">
+			<input type="email" id="usernameid" name="username" placeholder="Enter your email id">
+
+			<input type="password" id="passwordid" name="password" placeholder="password">
+			<input type="submit" name="submit" value="Login" placeholder="Confirm password">
+		</form>	
+	</div>
+{% endblock %}

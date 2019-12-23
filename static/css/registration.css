@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	width: 50%;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid aqua;
+  border-radius: 4px;
+}
+
+input[type=submit]{
+	background-color: mediumseagreen;
+}
+
+header{
+	color: mediumseagreen;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+}

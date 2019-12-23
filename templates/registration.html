@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Registration
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/registration.css">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<header>
+		New User can register here
+	</header>
+	<form action="{{ url_for('reg')}}" method="POST">
+		<div>
+			<input type="email" name="username" placeholder="Enter your email id" autofocus>	
+		</div>
+		<div>
+			<input type="password" name="password" placeholder="password">	
+		</div>
+		<div>
+			<input type="password" name="confirmPassword" placeholder="Confirm password">	
+		</div>
+		
+		<div>
+			<input type="submit" name="submit" value="Register">	
+		</div>
+	</form>
+</div>
+	
+
+{% endblock %}

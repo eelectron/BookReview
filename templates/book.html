@@ -1,0 +1,93 @@
+{% extends "layout.html"%}
+
+{% block title %}
+	Book
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="/static/css/book.css">
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+		<section class="details">
+		<div class="row">
+			<div class="col-25">ISBN </div> 		<div class="col-75">{{ book.isbn }}</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">Title </div> 		<div class="col-75">{{ book.title }}</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">Author</div> 	<div class="col-75">{{ book.author }}</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">Year</div> 		<div class="col-75">{{ book.year }}</div>
+		</div>
+			 
+		<div class="row">
+			<div class="col-25">Average Rating </div> 		<div class="col-75">{{ bookReview.average_rating }}</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-25">Reviews Count </div> 		<div class="col-75">{{ bookReview.work_ratings_count }}</div>	
+		</div>
+	</section>
+	</div>
+	
+
+	<section class="giveComments">
+		<div class="row">
+			Give your comments on this book
+		</div>
+
+		<form action="{{url_for('saveReview', isbn = book.isbn)}}" method="POST">
+		<div class="row">
+			<div class="col-25">Rating(1-5):</div>
+		<div class="col-75">
+			<select name="rating">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>	
+		</div>
+		
+
+		<div class="row">
+			<textarea name="comment" rows="5" cols="50"></textarea>	
+		</div>
+		
+		<div class="row">
+			<input type="submit" name="saveReview" value="Save">	
+		</div>
+		
+		</form>	
+	</section>
+	
+	<!--User Comments appears below -->
+	<section class="comments">
+		<h3>Comments</h3>
+		{% for comment in usersComment %}
+		<div class="comment">
+			<div class="userinfo">
+				<div>{{comment.username}}</div>
+				<div>rating : {{comment.rating}}</div>	
+			</div>
+			
+			<div class="userComment">
+				{{comment.comment}}
+			</div>
+		</div>
+			
+		{% endfor %}
+	</section>			
+	</div>
+	
+	
+{% endblock %}

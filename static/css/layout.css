@@ -1,0 +1,27 @@
+ul.mynavbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+ul.mynavbar li{
+	float: left;
+}
+
+ul.mynavbar li a{
+	display: block;
+	padding: 8px;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+body{
+  background-image: url(Photo_by_Susan_Yin_on_Unsplash.jpg);
+  background-size: 700px;
+}
