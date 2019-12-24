@@ -1,3 +1,23 @@
 img{
 	height: 100%;
 }
+
+h1{
+	text-align: center;
+	color: #2288ff;
+	width: 50%;
+	margin: 100px auto;
+	background-color: #000;
+	border-radius: 5px;
+	font-size: 3vw;
+}
+
+.register{
+	text-align: center;
+	color: white;
+	width: 200px;
+	margin: 30px auto;
+	font-size: 3vw;
+	background-color: #000;
+	border-radius: 5px;
+}
