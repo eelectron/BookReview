@@ -4,8 +4,12 @@
 	Search
 {% endblock%}
 
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="/static/css/error.css">
+{% endblock %}
+
 {% block body%}
-	<div>
+	<div class="message">
 		{{ message }}
 	</div>
 {% endblock %}
