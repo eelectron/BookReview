@@ -1,18 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
 .container{
 	width: 50%;
 	margin: 0 auto;
 	background-color: #c6a176;
 }
 
-/*
+
 .row:after{
 	content: "";
 	display: table;
 	clear: both;
 }
-*/
+
+textarea{
+	width: 100%;
+}
+
 .row{
-	margin-top: 5px;
+	margin-top: 10px;
+	width: 100%;
 }
 
 .col-25{
@@ -31,8 +40,9 @@ section{
 }
 
 select{
-	width: 200px;
+	width: 100%;
 	padding: 10px;
+	resize: vertical;
 }
 
 .col-100{
@@ -60,4 +70,10 @@ input[type=submit]{
 
 .comments{
 	margin-top: 5px;
+}
+
+@media screen and (max-width: 600px){
+	.container{
+		width: 100%;
+	}
 }

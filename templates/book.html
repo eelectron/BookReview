@@ -46,21 +46,20 @@
 
 		<form action="{{url_for('saveReview', isbn = book.isbn)}}" method="POST">
 		<div class="row">
-			<div class="col-25">Rating(1-5):</div>
-		<div class="col-75">
-			<select name="rating">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>	
+			<div class="col-25">Rating(1-5):</div> <div class="col-75">
+				<select name="rating">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>	
 		</div>
 		
 
 		<div class="row">
-			<textarea name="comment" rows="5" cols="50"></textarea>	
+			<textarea name="comment" rows="5" placeholder="Give your comments" autofocus></textarea>	
 		</div>
 		
 		<div class="row">

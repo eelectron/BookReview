@@ -16,14 +16,14 @@ table {
 
 td , th{
   border: 1px solid black;
-  padding: 8px;
+  padding: 6px;
 }
 
 th{
 	background-color: white;
 }
 input[type=text]{
-	width: 50%;
+	width: 100%;
 	padding: 12px;
 	border-radius: 4px;
 	border: 1px solid mediumseagreen;
@@ -33,15 +33,16 @@ label{
 	padding: 12px;
 	background-color: mediumseagreen;
 	border-radius: 4px;
+	width: 100%;
 }
 
 .container{
-	width: 50%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 10px auto;
 }
 
 tr:hover{
-	background-color: #afa;
+	background-color: #faa;
 }
 
 tr:nth-child(even){

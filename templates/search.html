@@ -12,7 +12,6 @@
 {% block body %}
 <div class="container">
 	<form action="{{ url_for('search') }}" method="POST">
-		<label for="queryid">Search Books</label>
 		<input type="text" id="queryid" name="query" autocomplete="off" placeholder="Enter book title or author or isbn . For ex. Tiger Lily" autofocus>
 	</form>
 </div>

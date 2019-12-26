@@ -57,13 +57,18 @@ def login():
 		password = request.form.get("password")
 		
 		# search books
-		userRow = db.execute("SELECT * FROM users WHERE username = :username AND password = :password", {"username": username, "password": password})
-		if userRow.rowcount == 1:
-			session["username"] = username
-			return redirect(url_for("search"))
-		else:
-			message = username +  " does not exist. Please register first ."
+		userRow = db.execute("SELECT * FROM users WHERE username = :username", {"username": username})
+		if userRow.rowcount == 0:
+			message = "user does not exist "
 			return render_template("error.html", message=message)
+
+		pwRow = db.execute("SELECT * FROM users WHERE password = :password", {"password": password})
+		if pwRow.rowcount == 0:
+			message = "Please enter correct password"
+			return render_template("error.html", message=message)
+
+		session["username"] = username
+		return redirect(url_for("search"))
 	else:
 		return render_template("login.html")
 
