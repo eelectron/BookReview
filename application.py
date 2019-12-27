@@ -27,7 +27,10 @@ KEY = "k6fepBYZ2ZoNgVz6kfLg"
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	if "username" in session:
+		return redirect(url_for("search"))
+	else:
+		return render_template("index.html")
 
 @app.route("/reg", methods=["POST", "GET"])
 def reg():
