@@ -25,4 +25,4 @@ Goodreads details:
 key: k6fepBYZ2ZoNgVz6kfLg
 secret: 30tpv71Me12C8jskY54cgb8WyE5asFy4OrigkLnLJQ
 
-http://lookthebook.herokuapp.com``
+http://lookthebook.herokuapp.com
