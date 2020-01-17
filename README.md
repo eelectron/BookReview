@@ -6,7 +6,11 @@ Name of this web project is Book Review .
 This website let the user register on it . After registering , the user can login and search for their favourite books . 
 They can search books by the their title, author, isbn or published year .
 They can check the average rating of the book .
-They can see the comments given by other users .
+They can give comments and see the comments given by other users .
+
+Website overview : https://youtu.be/UY2I9cj-tHA
+
+Try it : http://lookthebook.herokuapp.com
 
 Short Webpage Flow:
 Home
@@ -19,10 +23,8 @@ Home
 								---> Give comments on that book
 	Logout
 
-https://youtu.be/UY2I9cj-tHA
+
 
 Goodreads details:
 key: k6fepBYZ2ZoNgVz6kfLg
 secret: 30tpv71Me12C8jskY54cgb8WyE5asFy4OrigkLnLJQ
-
-http://lookthebook.herokuapp.com
